@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>About | k4641321的个人博客</title>
+    <title>Archives | k4641321的个人博客</title>
     <meta name="author" content="k4641321" />
     <meta name="description" content="" />
     <meta name="keywords" content="k4641321,博客" />
@@ -45,11 +45,7 @@
 
 
 
-
-
-
-
-<script src="https://s4.zstatic.net/ajax/libs/twikoo/1.6.31/twikoo.all.min.js"></script>
+<script src="/js/lib/search.js"></script>
 
 
 
@@ -161,36 +157,79 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div class="article">
-    <div>
-        <h1>About</h1>
-    </div>
-    <div class="info">
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2024/10/1
-        </span>
+            
+<div id="archives">
+    
+    <input id="search-bar" class="input" placeholder="搜索" v-model="rawSearch" />
+    
+    <div id="timeline-wrap" ref="timeline">
         
+        <div class="timeline" data-title="test">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2024/10/1</div>
+                <a href="/2024/10/01/test/">
+                    <h3>test</h3>
+                </a>
+                <div class="info">
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/test/" style="color: #ffa2c4">
+                                test
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/%E5%8F%AF%E5%90%A6%E4%B8%AD%E6%96%87-%E7%AD%94%E6%A1%88%E6%98%AF%E5%8F%AF/" style="color: #00bcd4">
+                                可否中文?答案是可
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="ppthelper">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2024/11/16</div>
+                <a href="/2024/11/16/ppthelper/">
+                    <h3>ppthelper</h3>
+                </a>
+                <div class="info">
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/python-ppt-ppthelper/" style="color: #00bcd4">
+                                python ppt ppthelper
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
         
     </div>
-    
-    <div class="content" v-pre>
-        <p>有什么可以讲的?没有什么可以讲的<br><br>主页的背景图来自栗次元的自适应随机图api接口：<a href="https://t.alcy.cc/moe">https://t.alcy.cc/moe</a></p>
-
-    </div>
-    
-    
-    
-    
-    
-    
-    <div id="comment">
-        <div id="twikoo-container"></div>
-    </div>
-    
-    
 </div>
 
             <footer id="footer">
@@ -221,22 +260,6 @@
         
     </div>
     <script src="/js/main.js"></script>
-    
-    
-
-
-
-<script>
-    twikoo.init({
-        el: "#twikoo-container",
-        envId: "",
-        region: "",
-        path: location.pathname,
-        lang: "",
-    })
-</script>
-
-
     
 </body>
 </html>
