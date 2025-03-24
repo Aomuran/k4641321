@@ -182,14 +182,14 @@
             
             <span class="tag">
                 
-                <a href="/tags/%E8%BD%AC%E7%A0%81/" style="color: #03a9f4">
+                <a href="/tags/%E8%BD%AC%E7%A0%81/" style="color: #ffa2c4">
                     转码
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/FFmpeg/" style="color: #ff7d73">
+                <a href="/tags/FFmpeg/" style="color: #03a9f4">
                     FFmpeg
                 </a>
             </span>
@@ -217,9 +217,17 @@
 <ol>
 <li>在终端中输入<code>termux-change-repo</code>来使用带有GUI界面跟换软件源，依次为输入<code>termux-change-repo</code>，回车，选择选项里带有<code>Chinese Mainland</code>字样的选项，等待完成</li>
 <li>用文本编辑器直接编辑<code>$PREFIX/etc/apt/sources.list</code>文件，在原本的源前面加上#号，换行写入<code>deb https://mirrors.tuna.tsinghua.edu.cn/termux/apt/termux-main stable main</code>，保存，使用命令<code>apt update</code>来更新软件源</li>
-<li>使用<code>sed -i &#39;s@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/apt/termux-main stable main@&#39; $PREFIX/etc/apt/sources.list</code>命令更换软件源，同样需要<code>apt update</code></li>
+<li>使用</li>
 </ol>
-<p>接着，我们使用命令<code>pkg install ffmpeg</code>来安装ffmpeg，安装完成后，将你要转换的文件放入termux的储存空间里，使用<code>ffmpeg -i 原文件路径 输出文件路径</code>来进行格式转换，等到输出完成，文件就转换好了</p>
+<pre><code>sed -i &#39;s@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/apt/termux-main stable main@&#39; $PREFIX/etc/apt/sources.list
+</code></pre>
+<p>命令更换软件源，同样需要</p>
+<pre><code>apt update
+</code></pre>
+<p>接着，我们使用命令</p>
+<pre><code>pkg install ffmpeg
+</code></pre>
+<p>来安装ffmpeg，安装完成后，将你要转换的文件放入termux的储存空间里，使用<code>ffmpeg -i 原文件路径 输出文件路径</code>来进行格式转换，等到输出完成，文件就转换好了</p>
 <h3 id="没错，就这么简单，结束"><a href="#没错，就这么简单，结束" class="headerlink" title="没错，就这么简单，结束"></a>没错，就这么简单，结束</h3>
     </div>
     
